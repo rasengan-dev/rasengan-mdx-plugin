@@ -1,0 +1,49 @@
+{
+  "name": "@rasenganjs/mdx",
+  "private": false,
+  "version": "1.0.0",
+  "description": "RasenganJS plugin for MDX support",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js"
+    }
+  },
+  "author": {
+    "name": "dilane3",
+    "email": "komboudilane125@gmail.com",
+    "url": "https://dilane3.com",
+    "twitter": "https://twitter.com/dilanekombou",
+    "github": "https://github.com/dilane3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rasengan-dev/rasengan-mdx-plugin.git",
+    "issues": "https://github.com/rasengan-dev/rasengan-mdx-plugin/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build:clean": "rm -rf ./lib",
+    "build": "npm run build:clean && tsc",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "pack": "npm pack --pack-destination ./../../packages/@rasenganjs/mdx",
+    "deploy": "npm publish --access public"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@mdx-js/rollup": "^3.0.1",
+    "@rollup/pluginutils": "^5.1.0",
+    "gray-matter": "^4.0.3",
+    "prism-react-renderer": "^2.3.1",
+    "prismjs": "^1.29.0"
+  },
+  "peerDependencies": {
+    "rasengan": "^1.0.0-beta.35",
+    "react": "^18.3.1"
+  }
+}
